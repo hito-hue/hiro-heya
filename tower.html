@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>タワマン版（安全エリア）｜ハザード安全 × ペットOK</title>
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--line:#262b36;--txt:#e8ecf2;--sub:#9aa4b2;--accent:#4ade80;--accent2:#38bdf8;--pet:#f472b6;--gold:#fbbf24}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .hero{padding:44px 24px 30px;text-align:center;background:radial-gradient(900px 440px at 50% -140px,rgba(251,191,36,.18),transparent 70%),linear-gradient(180deg,#14131a,#0f1115)}
+  .hero .kicker{display:inline-block;font-size:12px;letter-spacing:.2em;color:var(--gold);border:1px solid rgba(251,191,36,.35);border-radius:999px;padding:6px 14px;margin-bottom:16px}
+  .hero h1{font-size:27px;font-weight:800}.hero h1 .hl{color:var(--gold)}
+  .hero p{color:var(--sub);margin-top:12px;font-size:14px;max-width:680px;margin-left:auto;margin-right:auto}
+  .nav{display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+  .nav a{font-size:13px;font-weight:700;text-decoration:none;padding:9px 15px;border-radius:999px}
+  .nav a.on{background:linear-gradient(180deg,#fbcf5a,#eaa713);color:#2a1e03}
+  .nav a.off{background:#1b1f28;color:#cfd6e0;border:1px solid var(--line)}
+  .note{max-width:880px;margin:20px auto 0;padding:14px 18px;font-size:13px;color:#cfd6e0;background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.22);border-radius:12px;text-align:left}
+  .wrap{max-width:1040px;margin:0 auto;padding:30px 20px 70px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+  .card:hover{transform:translateY(-4px);border-color:#3a4252}
+  .ph{position:relative;aspect-ratio:3/4;max-height:360px;overflow:hidden;background:#0b0d12}
+  .ph img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .badges{position:absolute;top:12px;left:12px;display:flex;gap:8px;flex-wrap:wrap}
+  .b{font-size:11px;font-weight:700;padding:5px 10px;border-radius:999px;backdrop-filter:blur(6px)}
+  .b.safe{background:rgba(74,222,128,.92);color:#07210f}
+  .b.pet{background:rgba(244,114,182,.92);color:#2a0817}
+  .b.fl{background:rgba(251,191,36,.95);color:#2a1e03}
+  .rent{position:absolute;right:12px;bottom:12px;background:rgba(10,12,16,.82);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.1);padding:7px 12px;border-radius:12px;text-align:right}
+  .rent b{font-size:20px;color:#fff}.rent span{font-size:11px;color:var(--sub);display:block}
+  .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .area{font-size:17px;font-weight:800}
+  .area small{display:block;font-size:12px;color:var(--sub);font-weight:500;margin-top:2px}
+  .nm{font-size:12px;color:var(--gold)}
+  .specs{display:flex;gap:8px;flex-wrap:wrap}
+  .sp{font-size:12px;color:#cfd6e0;background:#1b1f28;border:1px solid var(--line);border-radius:8px;padding:5px 9px}
+  .hz{font-size:12.5px;color:#bdf3ce;background:rgba(74,222,128,.09);border:1px solid rgba(74,222,128,.22);border-radius:10px;padding:9px 11px}
+  .hz b{color:var(--accent)}
+  .acts{display:flex;gap:10px;margin-top:auto}
+  .btn{flex:1;text-align:center;text-decoration:none;font-size:13px;font-weight:700;padding:11px;border-radius:11px}
+  .btn.p{background:linear-gradient(180deg,#5ae08a,#2fbf6d);color:#06220f}
+  .btn.s{background:#1b1f28;color:#cfd6e0;border:1px solid var(--line)}
+  footer{text-align:center;color:var(--sub);font-size:12px;padding:0 20px 50px}
+  footer a{color:var(--accent2)}
+</style>
+</head>
+<body>
+  <header class="hero">
+    <span class="kicker">T O W E R   ·   S A F E   G R O U N D</span>
+    <h1>タワマン版 ×「<span class="hl">埋立地じゃない</span>」</h1>
+    <p>湾岸（晴海・豊洲・芝浦・港南）の埋立タワーは液状化リスクが高いので除外。内陸の台地にある、ハザードが安全な15〜44階建てのタワー／高層マンションだけを集めました。全部ペットOK・50㎡以上・20〜30万です。</p>
+    <nav class="nav">
+      <a class="off" href="index.html">低層版</a>
+      <a class="off" href="mansion.html">中層版</a>
+      <a class="on" href="tower.html">タワマン版（今ここ）</a>
+    </nav>
+    <div class="note">💡 ここは全部「台地＝地盤が固く水害に強い場所」のタワーです。湾岸のタワマンより眺望は控えめな分、地震・浸水に強いのが売り。最終判断の前に各カードの <b>ハザードマップ</b> から住所で確認するとより安心です。</div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+
+      <!-- A 西新宿44F -->
+      <article class="card">
+        <div class="ph">
+          <img src="TA_go.jpg" alt="西新宿 タワー外観">
+          <div class="badges"><span class="b safe">◎ 台地で安全</span><span class="b pet">🐾 ペットOK</span><span class="b fl">44階建</span></div>
+          <div class="rent"><b>27.0万</b><span>いちばん高層</span></div>
+        </div>
+        <div class="body">
+          <div class="area">新宿区 西新宿<small>東京メトロ丸ノ内線「西新宿」駅 徒歩8分</small></div>
+          <div class="nm">コンシェリア西新宿 TOWER'S WEST</div>
+          <div class="specs"><span class="sp">1LDK</span><span class="sp">55.2㎡</span><span class="sp">超高層44階</span></div>
+          <div class="hz"><b>台地：淀橋台（西新宿）</b>／都庁すぐの本格タワー。内陸で液状化リスク低。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000109905587/?bc=100527498149" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.6940,139.6880&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- B 池袋32F -->
+      <article class="card">
+        <div class="ph">
+          <img src="TB_go.jpg" alt="池袋 タワー外観">
+          <div class="badges"><span class="b safe">◎ 台地で安全</span><span class="b pet">🐾 ペットOK</span><span class="b fl">32階建</span></div>
+          <div class="rent"><b>23.7万</b><span>池袋駅2分</span></div>
+        </div>
+        <div class="body">
+          <div class="area">豊島区 西池袋<small>JR山手線「池袋」駅 徒歩2分</small></div>
+          <div class="nm">ウエストパークタワー池袋</div>
+          <div class="specs"><span class="sp">1LDK</span><span class="sp">50.1㎡</span><span class="sp">駅2分の32階</span></div>
+          <div class="hz"><b>台地：豊島台地</b>／池袋2分の超駅近タワー。買い物・交通が最強クラス。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000110259371/?bc=100530461371" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7330,139.7080&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- C 目黒22F -->
+      <article class="card">
+        <div class="ph">
+          <img src="TC_go.jpg" alt="目黒 タワー外観">
+          <div class="badges"><span class="b safe">◎ 台地で安全</span><span class="b pet">🐾 ペットOK</span><span class="b fl">22階建</span></div>
+          <div class="rent"><b>30.0万</b><span>目黒駅6分</span></div>
+        </div>
+        <div class="body">
+          <div class="area">品川区 上大崎（目黒）<small>JR山手線「目黒」駅 徒歩6分</small></div>
+          <div class="nm">アクロス目黒タワー</div>
+          <div class="specs"><span class="sp">1LDK</span><span class="sp">54.0㎡</span><span class="sp">目黒のランドマーク</span></div>
+          <div class="hz"><b>台地：上大崎（目黒台地）</b>／目黒駅前の人気タワー。高台で安全。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000110525399/?bc=100532454023" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.6330,139.7140&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- D 上池袋22F -->
+      <article class="card">
+        <div class="ph">
+          <img src="TD_go.jpg" alt="上池袋 タワー外観">
+          <div class="badges"><span class="b safe">◎ 台地で安全</span><span class="b pet">🐾 ペットOK</span><span class="b fl">22階建</span></div>
+          <div class="rent"><b>23.0万</b><span>コスパ◎</span></div>
+        </div>
+        <div class="body">
+          <div class="area">豊島区 上池袋<small>JR山手線「大塚」駅 徒歩10分</small></div>
+          <div class="nm">レジディアタワー上池袋</div>
+          <div class="specs"><span class="sp">1SLDK</span><span class="sp">55.1㎡</span><span class="sp">22階で23万</span></div>
+          <div class="hz"><b>台地：豊島台地</b>／22階タワーで23万は割安。広めの1SLDK。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000110209097/?bc=100532102981" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7380,139.7230&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- E 小石川15F -->
+      <article class="card">
+        <div class="ph">
+          <img src="TE_go.jpg" alt="小石川 高層外観">
+          <div class="badges"><span class="b safe">◎ 台地で安全</span><span class="b pet">🐾 ペットOK</span><span class="b fl">15階建</span></div>
+          <div class="rent"><b>21.8万</b><span>この中で最安</span></div>
+        </div>
+        <div class="body">
+          <div class="area">文京区 小石川<small>東京メトロ南北線「後楽園」駅 徒歩5分</small></div>
+          <div class="nm">JPノイエ小石川富坂</div>
+          <div class="specs"><span class="sp">1LDK</span><span class="sp">50.5㎡</span><span class="sp">都心・文京で安い</span></div>
+          <div class="hz"><b>台地：小石川台地</b>／後楽園5分の高層。文京区の都心立地で最安。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000109151558/?bc=100532092212" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7070,139.7510&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    物件情報・写真の出典：SUUMO（スーモ）／ハザード評価は地形（台地・低地）にもとづく目安です。<br>
+    正確なリスクは <a href="https://disaportal.gsi.go.jp/" target="_blank">国交省「重ねるハザードマップ」</a> で住所を入力してご確認ください。
+  </footer>
+</body>
+</html>
