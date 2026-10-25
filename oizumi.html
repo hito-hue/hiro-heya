@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大泉学園版｜ハザード安全 × ペットOK</title>
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--line:#262b36;--txt:#e8ecf2;--sub:#9aa4b2;--accent:#4ade80;--accent2:#38bdf8;--pet:#f472b6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .hero{padding:44px 24px 30px;text-align:center;background:radial-gradient(900px 420px at 50% -120px,rgba(74,222,128,.18),transparent 70%),linear-gradient(180deg,#131a16,#0f1115)}
+  .hero .kicker{display:inline-block;font-size:12px;letter-spacing:.18em;color:var(--accent);border:1px solid rgba(74,222,128,.35);border-radius:999px;padding:6px 14px;margin-bottom:16px}
+  .hero h1{font-size:27px;font-weight:800}.hero h1 .hl{color:var(--accent)}
+  .hero p{color:var(--sub);margin-top:12px;font-size:14px;max-width:680px;margin-left:auto;margin-right:auto}
+  .nav{display:flex;gap:9px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+  .nav a{font-size:13px;font-weight:700;text-decoration:none;padding:9px 14px;border-radius:999px}
+  .nav a.on{background:linear-gradient(180deg,#5ae08a,#2fbf6d);color:#06220f}
+  .nav a.off{background:#1b1f28;color:#cfd6e0;border:1px solid var(--line)}
+  .note{max-width:880px;margin:20px auto 0;padding:14px 18px;font-size:13px;color:#cfd6e0;background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.22);border-radius:12px;text-align:left}
+  .wrap{max-width:1040px;margin:0 auto;padding:30px 20px 70px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+  .card:hover{transform:translateY(-4px);border-color:#3a4252}
+  .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0b0d12}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .badges{position:absolute;top:12px;left:12px;display:flex;gap:8px;flex-wrap:wrap}
+  .b{font-size:11px;font-weight:700;padding:5px 10px;border-radius:999px;backdrop-filter:blur(6px)}
+  .b.safe{background:rgba(74,222,128,.92);color:#07210f}
+  .b.pet{background:rgba(244,114,182,.92);color:#2a0817}
+  .b.fe{background:rgba(56,189,248,.92);color:#04212e}
+  .rent{position:absolute;right:12px;bottom:12px;background:rgba(10,12,16,.82);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.1);padding:7px 12px;border-radius:12px;text-align:right}
+  .rent b{font-size:20px;color:#fff}.rent span{font-size:11px;color:var(--sub);display:block}
+  .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .area{font-size:17px;font-weight:800}
+  .area small{display:block;font-size:12px;color:var(--sub);font-weight:500;margin-top:2px}
+  .nm{font-size:12px;color:var(--accent2)}
+  .specs{display:flex;gap:8px;flex-wrap:wrap}
+  .sp{font-size:12px;color:#cfd6e0;background:#1b1f28;border:1px solid var(--line);border-radius:8px;padding:5px 9px}
+  .hz{font-size:12.5px;color:#bdf3ce;background:rgba(74,222,128,.09);border:1px solid rgba(74,222,128,.22);border-radius:10px;padding:9px 11px}
+  .hz b{color:var(--accent)}
+  .acts{display:flex;gap:10px;margin-top:auto}
+  .btn{flex:1;text-align:center;text-decoration:none;font-size:13px;font-weight:700;padding:11px;border-radius:11px}
+  .btn.p{background:linear-gradient(180deg,#5ae08a,#2fbf6d);color:#06220f}
+  .btn.s{background:#1b1f28;color:#cfd6e0;border:1px solid var(--line)}
+  footer{text-align:center;color:var(--sub);font-size:12px;padding:0 20px 50px}
+  footer a{color:var(--accent2)}
+</style>
+</head>
+<body>
+  <header class="hero">
+    <span class="kicker">O I Z U M I - G A K U E N</span>
+    <h1>大泉学園で探す（<span class="hl">広い × 安い × 安全</span>）</h1>
+    <p>大泉学園（西武池袋線）は武蔵野台地でハザードは安全◎。都心より家賃が安いので、同じ予算でも 50〜74㎡とかなり広くなります。全部ペットOK。池袋まで1本で約15分です。</p>
+    <nav class="nav">
+      <a class="off" href="index.html">低層版</a>
+      <a class="off" href="mansion.html">中層版</a>
+      <a class="off" href="tower.html">タワマン版</a>
+      <a class="on" href="oizumi.html">大泉学園版（今ここ）</a>
+    </nav>
+    <div class="note">💡 大泉学園に“タワマン”はありません（賃貸は最高7階建）。その代わり、<b>同じ20〜30万の予算なら都心より一回り広い部屋</b>が狙えます。下はすべて大泉学園駅 徒歩2〜10分・ペット相談OK・武蔵野台地で安全◎。家賃は予算より安い16〜20万が中心です。</div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+
+      <!-- A ウインドヒルズ 3LDK74 -->
+      <article class="card">
+        <div class="ph">
+          <img src="OA_ro.jpg" alt="大泉学園 室内">
+          <div class="badges"><span class="b safe">◎ 台地で安全</span><span class="b pet">🐾 ペットOK</span><span class="b fe">3LDK</span></div>
+          <div class="rent"><b>16.3万</b><span>いちばん広い 74㎡</span></div>
+        </div>
+        <div class="body">
+          <div class="area">練馬区 東大泉<small>西武池袋線「大泉学園」駅 徒歩10分</small></div>
+          <div class="nm">ウインドヒルズ189</div>
+          <div class="specs"><span class="sp">3LDK</span><span class="sp">74.3㎡</span><span class="sp">今の家の2倍超</span></div>
+          <div class="hz"><b>武蔵野台地◎</b>／74㎡の3LDKで16.3万は破格。ファミリーでも余裕の広さ。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000109663135/?bc=100525680609" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7510,139.5880&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- B グランフォンテ 11F -->
+      <article class="card">
+        <div class="ph">
+          <img src="OB_ro.jpg" alt="大泉学園 室内">
+          <div class="badges"><span class="b safe">◎ 台地で安全</span><span class="b pet">🐾 ペットOK</span><span class="b fe">11階建</span></div>
+          <div class="rent"><b>20.3万</b><span>大泉学園で一番高い建物</span></div>
+        </div>
+        <div class="body">
+          <div class="area">練馬区 東大泉<small>西武池袋線「大泉学園」駅 徒歩5分</small></div>
+          <div class="nm">グランフォンテ</div>
+          <div class="specs"><span class="sp">2LDK</span><span class="sp">58.1㎡</span><span class="sp">11階建で眺望◎</span></div>
+          <div class="hz"><b>武蔵野台地◎</b>／大泉学園でいちばん背の高い11階建。駅5分で眺めも出ます。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000110271193/?bc=100530456665" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7490,139.5890&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- C グランコタンズ 駅3分 -->
+      <article class="card">
+        <div class="ph">
+          <img src="OC_ro.jpg" alt="大泉学園 室内">
+          <div class="badges"><span class="b safe">◎ 台地で安全</span><span class="b pet">🐾 ペットOK</span><span class="b fe">駅3分</span></div>
+          <div class="rent"><b>18.5万</b><span>駅3分・きれい</span></div>
+        </div>
+        <div class="body">
+          <div class="area">練馬区 東大泉<small>西武池袋線「大泉学園」駅 徒歩3分</small></div>
+          <div class="nm">GRAN COTANS（グランコタンズ）</div>
+          <div class="specs"><span class="sp">2LDK</span><span class="sp">54.1㎡</span><span class="sp">7階建・駅チカ</span></div>
+          <div class="hz"><b>武蔵野台地◎</b>／駅3分の好立地。デザインもきれいな7階建マンション。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000107535663/?bc=100524261379" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7490,139.5870&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- D グリーンスクエアみその 築2年 -->
+      <article class="card">
+        <div class="ph">
+          <img src="OD_ro.jpg" alt="大泉学園 室内">
+          <div class="badges"><span class="b safe">◎ 台地で安全</span><span class="b pet">🐾 ペットOK</span><span class="b fe">築2年</span></div>
+          <div class="rent"><b>19.2万</b><span>築2年・広い</span></div>
+        </div>
+        <div class="body">
+          <div class="area">練馬区 東大泉<small>西武池袋線「大泉学園」駅 徒歩7分</small></div>
+          <div class="nm">グリーンスクエアみその</div>
+          <div class="specs"><span class="sp">2LDK</span><span class="sp">61.9㎡</span><span class="sp">築2年でピカピカ</span></div>
+          <div class="hz"><b>武蔵野台地◎</b>／築2年の新しめ。62㎡の広い2LDKで20万切り。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000100891039/?bc=100531561819" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7500,139.5860&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- E 原田屋ビル 駅2分 -->
+      <article class="card">
+        <div class="ph">
+          <img src="OE_ro.jpg" alt="大泉学園 室内">
+          <div class="badges"><span class="b safe">◎ 台地で安全</span><span class="b pet">🐾 ペットOK</span><span class="b fe">駅2分</span></div>
+          <div class="rent"><b>17.0万</b><span>駅2分・最安クラス</span></div>
+        </div>
+        <div class="body">
+          <div class="area">練馬区 東大泉<small>西武池袋線「大泉学園」駅 徒歩2分</small></div>
+          <div class="nm">原田屋ビル</div>
+          <div class="specs"><span class="sp">2LDK</span><span class="sp">50.0㎡</span><span class="sp">とにかく駅近</span></div>
+          <div class="hz"><b>武蔵野台地◎</b>／駅2分の抜群アクセス。2LDK 50㎡で17万は使いやすい。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000110015489/?bc=100509359656" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7485,139.5875&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    物件情報・写真の出典：SUUMO（スーモ）／ハザード評価は地形（台地・低地）にもとづく目安です。<br>
+    正確なリスクは <a href="https://disaportal.gsi.go.jp/" target="_blank">国交省「重ねるハザードマップ」</a> で住所を入力してご確認ください。
+  </footer>
+</body>
+</html>
