@@ -1,0 +1,16 @@
+::ffff:127.0.0.1 - - [25/Oct/2026 17:10:05] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:10:08] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:10:08] "GET /A_ro.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:10:08] "GET /B_ro.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:10:08] "GET /C_ro.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:10:08] "GET /D_ro.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:10:08] code 404, message File not found
+::ffff:127.0.0.1 - - [25/Oct/2026 17:10:08] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:14:00] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:14:11] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:14:11] "GET /A_ro.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:14:11] "GET /B_ro.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:14:11] "GET /C_ro.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:14:11] "GET /D_ro.jpg HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [25/Oct/2026 17:14:11] code 404, message File not found
+::ffff:127.0.0.1 - - [25/Oct/2026 17:14:11] "GET /favicon.ico HTTP/1.1" 404 -
