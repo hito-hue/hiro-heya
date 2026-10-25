@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中層マンション版｜ハザード安全 × ペットOK</title>
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--line:#262b36;--txt:#e8ecf2;--sub:#9aa4b2;--accent:#4ade80;--accent2:#38bdf8;--pet:#f472b6;--warn:#fbbf24}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .hero{padding:44px 24px 30px;text-align:center;background:radial-gradient(900px 420px at 50% -120px,rgba(56,189,248,.22),transparent 70%),linear-gradient(180deg,#131722,#0f1115)}
+  .hero .kicker{display:inline-block;font-size:12px;letter-spacing:.18em;color:var(--accent2);border:1px solid rgba(56,189,248,.35);border-radius:999px;padding:6px 14px;margin-bottom:16px}
+  .hero h1{font-size:27px;font-weight:800}.hero h1 .hl{color:var(--accent)}
+  .hero p{color:var(--sub);margin-top:12px;font-size:14px;max-width:660px;margin-left:auto;margin-right:auto}
+  .nav{display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+  .nav a{font-size:13px;font-weight:700;text-decoration:none;padding:9px 16px;border-radius:999px}
+  .nav a.on{background:linear-gradient(180deg,#5ae08a,#2fbf6d);color:#06220f}
+  .nav a.off{background:#1b1f28;color:#cfd6e0;border:1px solid var(--line)}
+  .note{max-width:860px;margin:20px auto 0;padding:14px 18px;font-size:13px;color:#cfd6e0;background:rgba(56,189,248,.07);border:1px solid rgba(56,189,248,.25);border-radius:12px;text-align:left}
+  .wrap{max-width:1040px;margin:0 auto;padding:30px 20px 70px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+  .card:hover{transform:translateY(-4px);border-color:#3a4252}
+  .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0b0d12}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .badges{position:absolute;top:12px;left:12px;display:flex;gap:8px;flex-wrap:wrap}
+  .b{font-size:11px;font-weight:700;padding:5px 10px;border-radius:999px;backdrop-filter:blur(6px)}
+  .b.safe{background:rgba(74,222,128,.92);color:#07210f}
+  .b.ok{background:rgba(251,191,36,.92);color:#2a1e03}
+  .b.pet{background:rgba(244,114,182,.92);color:#2a0817}
+  .b.fl{background:rgba(56,189,248,.92);color:#04212e}
+  .rent{position:absolute;right:12px;bottom:12px;background:rgba(10,12,16,.82);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.1);padding:7px 12px;border-radius:12px;text-align:right}
+  .rent b{font-size:20px;color:#fff}.rent span{font-size:11px;color:var(--sub);display:block}
+  .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .area{font-size:17px;font-weight:800}
+  .area small{display:block;font-size:12px;color:var(--sub);font-weight:500;margin-top:2px}
+  .nm{font-size:12px;color:var(--accent2)}
+  .specs{display:flex;gap:8px;flex-wrap:wrap}
+  .sp{font-size:12px;color:#cfd6e0;background:#1b1f28;border:1px solid var(--line);border-radius:8px;padding:5px 9px}
+  .hz{font-size:12.5px;border-radius:10px;padding:9px 11px}
+  .hz.g{color:#bdf3ce;background:rgba(74,222,128,.09);border:1px solid rgba(74,222,128,.22)}
+  .hz.g b{color:var(--accent)}
+  .hz.y{color:#f6e3a6;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.22)}
+  .hz.y b{color:var(--warn)}
+  .acts{display:flex;gap:10px;margin-top:auto}
+  .btn{flex:1;text-align:center;text-decoration:none;font-size:13px;font-weight:700;padding:11px;border-radius:11px}
+  .btn.p{background:linear-gradient(180deg,#5ae08a,#2fbf6d);color:#06220f}
+  .btn.s{background:#1b1f28;color:#cfd6e0;border:1px solid var(--line)}
+  footer{text-align:center;color:var(--sub);font-size:12px;padding:0 20px 50px}
+  footer a{color:var(--accent2)}
+</style>
+</head>
+<body>
+  <header class="hero">
+    <span class="kicker">M I D - R I S E   M A N S I O N</span>
+    <h1>もし「<span class="hl">ちゃんとした中層マンション</span>」だったら</h1>
+    <p>タワマンほどではないけど、7〜13階建てのRCマンション版。同じ条件（ハザード安全な台地・ペットOK・50㎡以上・20〜30万）で、見た目も“マンションらしい”物件を集めました。</p>
+    <nav class="nav">
+      <a class="off" href="index.html">← 低層マンション版</a>
+      <a class="on" href="mansion.html">中層マンション版（今ここ）</a>
+    </nav>
+    <div class="note">💡 低層版（3〜6階）より建物が大きく、エレベーター・オートロックなどが整った“マンションらしい”物件です。文京区・豊島区は台地で安全◎。板橋・品川の2件は坂の上でおおむね安全ですが、近くに川の谷があるので <b>ハザードマップで確認</b> から住所でのチェックをおすすめします。</div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+
+      <!-- A 茗荷谷 -->
+      <article class="card">
+        <div class="ph">
+          <img src="MA_go.jpg" alt="文京区 茗荷谷 マンション外観">
+          <div class="badges"><span class="b safe">◎ ハザード安全</span><span class="b pet">🐾 ペットOK</span><span class="b fl">10階建</span></div>
+          <div class="rent"><b>22.4万</b><span>この中で最安</span></div>
+        </div>
+        <div class="body">
+          <div class="area">文京区 大塚（茗荷谷）<small>東京メトロ丸ノ内線「茗荷谷」駅 徒歩10分</small></div>
+          <div class="nm">ワーフ文京茗荷谷</div>
+          <div class="specs"><span class="sp">1LDK</span><span class="sp">50.3㎡</span><span class="sp">文教エリア</span></div>
+          <div class="hz g"><b>台地：小石川台地</b>／洪水・液状化リスク低。落ち着いた文京区で安い。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000109217468/?bc=100522922384" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7190,139.7380&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- B 東池袋 -->
+      <article class="card">
+        <div class="ph">
+          <img src="MB_go.jpg" alt="豊島区 東池袋 マンション外観">
+          <div class="badges"><span class="b safe">◎ ハザード安全</span><span class="b pet">🐾 ペットOK</span><span class="b fl">7階建・新築</span></div>
+          <div class="rent"><b>24.4万</b><span>新築</span></div>
+        </div>
+        <div class="body">
+          <div class="area">豊島区 東池袋<small>東京メトロ有楽町線「東池袋」駅 徒歩8分</small></div>
+          <div class="nm">クレストコート東池袋（新築）</div>
+          <div class="specs"><span class="sp">1SLDK</span><span class="sp">52.0㎡</span><span class="sp">池袋すぐ</span></div>
+          <div class="hz g"><b>台地：豊島台地</b>／新築でピカピカ。池袋まで徒歩圏で便利。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000108560110/?bc=100522222105" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7290,139.7220&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- C 本郷 -->
+      <article class="card">
+        <div class="ph">
+          <img src="MC_go.jpg" alt="文京区 本郷 マンション外観">
+          <div class="badges"><span class="b safe">◎ ハザード安全</span><span class="b pet">🐾 ペットOK</span><span class="b fl">8階建</span></div>
+          <div class="rent"><b>29.0万</b><span>ブランドマンション</span></div>
+        </div>
+        <div class="body">
+          <div class="area">文京区 本郷<small>都営大江戸線「本郷三丁目」駅 徒歩6分</small></div>
+          <div class="nm">パークアクシス文京本郷</div>
+          <div class="specs"><span class="sp">1SLDK</span><span class="sp">51.0㎡</span><span class="sp">3路線利用可</span></div>
+          <div class="hz g"><b>台地：本郷台地</b>／人気の「パークアクシス」。都心ど真ん中で安全。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000109777522/?bc=100523514536" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7080,139.7620&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- D 板橋大山 -->
+      <article class="card">
+        <div class="ph">
+          <img src="MD_go.jpg" alt="板橋区 大山 マンション外観">
+          <div class="badges"><span class="b ok">○ おおむね安全</span><span class="b pet">🐾 ペットOK</span><span class="b fl">12階建</span></div>
+          <div class="rent"><b>24.0万</b><span>いちばん高層</span></div>
+        </div>
+        <div class="body">
+          <div class="area">板橋区 大山<small>都営三田線「板橋区役所前」駅 徒歩5分</small></div>
+          <div class="nm">ワンルーフレジデンス板橋大山</div>
+          <div class="specs"><span class="sp">1LDK</span><span class="sp">55.9㎡</span><span class="sp">12階建で広め</span></div>
+          <div class="hz y"><b>台地寄り（○）</b>／高層12階建。近くに石神井川の低地があるので住所で要確認。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000107573705/?bc=100510199530" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.7510,139.7060&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- E 不動前 -->
+      <article class="card">
+        <div class="ph">
+          <img src="ME_go.jpg" alt="品川区 不動前 マンション外観">
+          <div class="badges"><span class="b ok">○ おおむね安全</span><span class="b pet">🐾 ペットOK</span><span class="b fl">10階建</span></div>
+          <div class="rent"><b>29.9万</b><span>いちばん広い 68㎡</span></div>
+        </div>
+        <div class="body">
+          <div class="area">品川区 西五反田（不動前）<small>東急目黒線「不動前」駅 徒歩3分</small></div>
+          <div class="nm">エスペランサ不動前かむろ坂</div>
+          <div class="specs"><span class="sp">1LDK</span><span class="sp">68.6㎡</span><span class="sp">駅3分・最大の広さ</span></div>
+          <div class="hz y"><b>坂の上（○）</b>／「かむろ坂」の高台。目黒川の谷が近いので住所で要確認。</div>
+          <div class="acts">
+            <a class="btn p" href="https://suumo.jp/chintai/jnc_000085636151/?bc=100529509832" target="_blank">SUUMOで見る</a>
+            <a class="btn s" href="https://disaportal.gsi.go.jp/maps/index.html?ll=35.6230,139.7130&z=15" target="_blank">ハザードマップ</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    物件情報・写真の出典：SUUMO（スーモ）／ハザード評価は地形（台地・低地）にもとづく目安です。<br>
+    正確なリスクは <a href="https://disaportal.gsi.go.jp/" target="_blank">国交省「重ねるハザードマップ」</a> で住所を入力してご確認ください。
+  </footer>
+</body>
+</html>
